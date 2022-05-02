@@ -1,0 +1,52 @@
+.accordion {
+  list-style: none;
+}
+
+.accordion > .item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-bottom: none;
+}
+
+.accordion > .item:last-of-type {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion > .item > button {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: initial;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  text-align: left;
+}
+
+.accordion > .item > button > div {
+  flex: 1;
+  position: relative;
+}
+
+.accordion > .item > button > .chrevron {
+  display: grid;
+  place-content: center;
+  height: max-content;
+  width: max-content;
+  transform: rotate(-90deg);
+}
+
+.accordion > .item > button > .chrevron.open {
+  transform: rotate(0);
+}
+
+.accordion > .item > button > .chrevron > svg {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.accordion > .item > .content {
+  padding: 1rem;
+  padding-left: calc(1rem + 1.25rem + 1rem);
+}

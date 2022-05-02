@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+.app {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: auto;
+}
+
+form input {
+  height: 40px;
+  border: 1px solid #ddd;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+ul li span {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+}
+ul li span.green {
+  background: green;
+  color: white;
+}
+ul li span.yellow {
+  background: yellow;
+}

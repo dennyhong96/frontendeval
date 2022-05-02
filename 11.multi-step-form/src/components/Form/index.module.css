@@ -1,0 +1,26 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  gap: 1rem;
+}
+
+.form > label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form button {
+  padding: 4px 8px;
+}
+.form button.back {
+  align-self: start;
+  background: initial;
+  padding: 0;
+  color: blue;
+}
+.form button.back:hover {
+  text-decoration: underline;
+}

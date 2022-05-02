@@ -1,0 +1,71 @@
+/* RESET */
+html,
+body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  font: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+/* APP */
+.app {
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.drops {
+  display: flex;
+}
+
+.drops > button {
+  flex: 1;
+  margin-bottom: 0.5rem;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+}
+
+.board > div {
+  display: flex;
+}
+
+.board > div > div {
+  flex: 1;
+  aspect-ratio: 1;
+  padding: 8px;
+  outline: 1px solid #ddd;
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+.board > div > div > div {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  right: 8px;
+  bottom: 8px;
+  border-radius: 99999px;
+}
+.board > div > div > div.red {
+  background: red;
+}
+.board > div > div > div.yellow {
+  background: yellow;
+}

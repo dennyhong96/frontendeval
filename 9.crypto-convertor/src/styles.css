@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+.app {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: auto;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.inputs > input,
+.inputs > select {
+  flex: 1 1 0;
+  width: 0;
+  border: 1px solid #ddd;
+  height: 40px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+.inputs > select {
+  cursor: pointer;
+}
+
+.display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.display > span,
+.display > div {
+  flex: 1 1 0;
+  width: 0;
+  display: block;
+  text-align: center;
+}
+
+.display > div.green {
+  color: green;
+}
+.display > div.red {
+  color: red;
+}

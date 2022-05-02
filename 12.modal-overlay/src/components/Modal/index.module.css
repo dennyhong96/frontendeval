@@ -1,0 +1,44 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  isolation: isolate;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 1);
+  padding: 2rem;
+  border-radius: 5px;
+}
+.content:focus {
+  outline: 2px solid -webkit-focus-ring-color;
+}
+
+.content > .close {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  display: grid;
+  place-content: center;
+}

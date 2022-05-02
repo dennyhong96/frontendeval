@@ -1,0 +1,32 @@
+.clock {
+  width: 100%;
+  aspect-ratio: 1;
+  border: 1px solid #333;
+  border-radius: 99999px;
+  position: relative;
+  isolation: isolate;
+  transform: rotate(-90deg);
+}
+
+.clock > div {
+  height: 1px;
+  width: 50%;
+  background: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center left;
+  transform: rotate(calc(var(--rotation, 0) * 1deg));
+}
+.clock > div:nth-of-type(1) {
+  height: 3px;
+  width: 45%;
+}
+.clock > div:nth-of-type(2) {
+  height: 2px;
+  width: 47.5%;
+}
+.clock > div:nth-of-type(3) {
+  background: red;
+  width: 49%;
+}

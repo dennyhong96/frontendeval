@@ -1,0 +1,27 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  gap: 1rem;
+}
+
+.form ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.form input {
+  display: block;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+.form button {
+  padding: 0.5rem;
+}
+.form button:disabled {
+  cursor: not-allowed;
+}

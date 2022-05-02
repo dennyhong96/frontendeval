@@ -1,0 +1,111 @@
+/* RESET */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+input {
+  font: inherit;
+  border: 1px solid #ddd;
+}
+
+/* APP */
+.app {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid #ddd;
+}
+
+.app > .search {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.app > .search > div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.app > .search > div > input {
+  flex: 1;
+  height: 40px;
+  padding: 0 8px;
+}
+
+.app > .search > div > button {
+  height: 40px;
+  width: 40px;
+  font-size: 1.5rem;
+}
+
+.app > .search > ul {
+  display: flex;
+  flex-direction: column;
+  max-height: 175px;
+  overflow-y: auto;
+}
+
+.app > .search > ul button {
+  width: 100%;
+  text-align: initial;
+  padding: 4px 8px;
+}
+.app > .search > ul button:focus {
+  background: #ddd;
+}
+
+.app > .display > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.app > .display > ul > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.app > .display > ul > li.checked {
+  opacity: 0.5;
+}
+
+.app > .display > ul > li > label {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.app > .display > ul > li.checked > label {
+  text-decoration: line-through;
+}

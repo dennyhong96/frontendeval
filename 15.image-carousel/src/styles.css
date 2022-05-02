@@ -1,0 +1,97 @@
+/* RESET */
+html,
+body,
+#app {
+  height: 100%;
+}
+
+#app {
+  display: grid;
+  place-center: center;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+ul {
+  list-style: none;
+}
+
+/* APP */
+[data-carousel] {
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+}
+
+[data-carousel] > ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+[data-carousel] > .nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: rgba(0, 0, 0, 25%);
+  border: none;
+  display: grid;
+  place-content: center;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 50%);
+  border-radius: 4px;
+  transition: 0.2s ease-out;
+}
+[data-carousel] > .nav-btn:hover {
+  background: rgba(0, 0, 0, 50%);
+  color: rgba(255, 255, 255, 75%);
+}
+[data-carousel] > .nav-btn:first-of-type {
+  left: 0.5rem;
+}
+[data-carousel] > .nav-btn:last-of-type {
+  right: 0.5rem;
+}
+
+[data-carousel] > ul > li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.15s ease-out;
+  transition-delay: 0.15s;
+}
+
+[data-carousel] > ul > li[data-active="true"] {
+  transition: 0.15s ease-in;
+  transition-delay: 0s;
+  opacity: 1;
+}
+
+[data-carousel] > ul > li > img {
+  width: 100%;
+  height: 100%;
+}
